@@ -5,7 +5,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat '''
-                ssh anisa@192.168.111.3 "cd /home/anisa/portfolio-website-project && git pull && docker compose up -d --build"
+                ssh anisa@192.168.111.3 "cd /home/anisa/portfolio-website-project && git pull && docker-compose up -d --build"
                 '''
             }
         }
